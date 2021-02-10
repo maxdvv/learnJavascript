@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create event</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id ="popup-error" class="popup">
+        <div><span class = "cross1">&otimes;</span></div>
+        <div id="text">Failed to create an event. Time slot is already broked.</div>
+        <div><span class="cross2" >&times;</span></div>
+    </div>
+
+    <div class="container">
+        <form action="#">
+        <div class="view-form">
+
+                <div><label>Name of the event:</label></div>
+                <div><input class="event" type="text" name="eventName" id="eventName" value=""></div>
+
+        </div>
+        <div class="view-form">
+            <div><label>Participants:</label></div>
+            <div>
+                <select name="participants" id="participants">
+                    <option value="1" selected>Maria,Bob,Alex</option>
+                    <option value="2">Anna,Jack</option>
+                    <option value="3">John,Andrew</option>
+                </select>
+            </div>
+        </div>
+        <div class="view-form">
+            <div><label>Day:</label></div>
+            <div>
+                <select name="day" id="day">
+                    <option value="1" selected>Mon</option>
+                    <option value="2">Tue</option>
+                    <option value="3">Wed</option>
+                    <option value="4">Thu</option>
+                    <option value="5">Fri</option>
+                </select>
+            </div>
+        </div>
+        <div class="view-form">
+            <div><label>Time:</label></div>
+            <div>
+                <select name="time" id="time">
+                    <option value="1" selected>10:00</option>
+                    <option value="2">11:00</option>
+                    <option value="3">12:00</option>
+                    <option value="4">13:00</option>
+                    <option value="5">14:00</option>
+                    <option value="6">15:00</option>
+                    <option value="7">16:00</option>
+                    <option value="8">17:00</option>
+                    <option value="9">18:00</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="view-form">
+            <button class="btn" type="reset" id="cancel">Cancel</button>
+            <button class="btn" type="submit" id="create">Create</button>
+        </div>
+        </form>
+    </div>
+
+    <script src="./js/create-event.js"></script>
+</body>
+</html>
