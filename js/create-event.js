@@ -36,7 +36,7 @@ document.querySelector('#create').onclick = (event) => {
                         console.log(day);
                         console.log(time);
 
-                        window.open('./calendar.html', "_self");
+                        window.open('./index.html', "_self");
                     } else {
                         popupError();
                     }
@@ -64,5 +64,5 @@ function popupError(text) {
 document.querySelector('#cancel').onclick = (event) => {
     event.preventDefault();
 
-    window.open('./calendar.html', "_self");
+    window.open('./index.html', "_self");
 }
