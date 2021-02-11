@@ -25,6 +25,9 @@ function addEvent() {
                 }
             }
         }
+    } else {
+        array = readTableToArray();
+        localStorage.setItem('array', JSON.stringify(array));
     }
 }
 
@@ -96,4 +99,28 @@ document.querySelector('#user-select').onchange = function() {
             }
         }
     }
+}
+
+function readTableToArray() {
+    let table = document.querySelector('#tableCalendar');
+    let tr = table.querySelectorAll('tr');
+    let th = table.querySelectorAll('th');
+
+    let arrayTd = [];
+    let arrayTh = [];
+
+    for (let i = 0; i < th.length; i++) {
+        arrayTh[i] = th[i].innerText;
+    }
+
+    for (let i = 0; i < tr.length; i++){
+        let td = tr[i].querySelectorAll('td');
+        arrayTd[i] = [];
+        for (let j = 0; j < td.length; j++) {
+            arrayTd[i][j] = td[j].innerHTML;
+        }
+    }
+    arrayTd.shift();
+    arrayTd.unshift(arrayTh);
+    return arrayTd;
 }
